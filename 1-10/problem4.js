@@ -5,10 +5,16 @@
  https://projecteuler.net/problem=4
 */
 
-const upperBound = 999
-const palindrome = findPalindrome(upperBound)
+console.time('Problem 4')
+main()
+console.timeEnd('Problem 4')
 
-console.log(palindrome)
+function main() {
+  const upperBound = 999
+  const palindrome = findPalindrome(upperBound)
+
+  console.log(palindrome)
+}
 
 function isPalindrome(num) {
   const numString = num.toString()

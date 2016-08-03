@@ -5,10 +5,16 @@
  https://projecteuler.net/problem=3
 */
 
-const myNumber = 600851475143
-const factors = findFactors(myNumber)
+console.time('Problem 3')
+main()
+console.timeEnd('Problem 3')
 
-console.log(`The largest prime factor is: ${factors[factors.length - 1]}`)
+function main() {
+  const myNumber = 600851475143
+  const factors = findFactors(myNumber)
+
+  console.log(`The largest prime factor is: ${factors[factors.length - 1]}`)
+}
 
 function findFactors(num) {
   let factors = []
@@ -22,8 +28,8 @@ function findFactors(num) {
     j = 2
   }
 
-  for (i; i <= num; i+=j) {
-    while((num % i) === 0) {
+  for (i; i <= num; i += j) {
+    while ((num % i) === 0) {
       if (isPrime(i)) {
         factors.push(i)
       }

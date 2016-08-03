@@ -5,9 +5,15 @@
  https://projecteuler.net/problem=5
 */
 
-const upperBound = 20
-const answer = findSmallestDivisable(upperBound)
-console.log(answer)
+console.time('Problem 5')
+main()
+console.timeEnd('Problem 5')
+
+function main() {
+  const upperBound = 25
+  const answer = findSmallestDivisable(upperBound)
+  console.log(`The smallest number that can be divided by all numbers below ${upperBound} is: ${answer}`)
+}
 
 function findSmallestDivisable(upperBound) {
   let result = 0
